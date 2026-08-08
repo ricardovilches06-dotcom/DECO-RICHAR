@@ -1,32 +1,29 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DECO RICHAR</title>
     <style>
-        /* CSS GENERAL Y FONDO OSCURO */
         body {
-            background-color: #0d0d0d; /* Casi negro */
-            color: #d9d9d9; /* Gris muy claro para texto */
+            background-color: #0d0d0d;
+            color: #d9d9d9;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
             text-align: center;
         }
 
-        /* TÍTULO PRINCIPAL Y EMOJI DE CORONA */
         .header {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .corona-emoji {
-            font-size: 3rem; /* Muy grande */
+            font-size: 3rem;
             margin-right: 10px;
             vertical-align: middle;
         }
         .main-title {
-            color: #ffca47; /* Dorado brillante */
+            color: #ffca47;
             display: inline;
             font-size: 2.2rem;
             font-weight: bold;
@@ -40,7 +37,6 @@
             margin-top: 10px;
         }
 
-        /* CAJA DE INSTRUCCIONES ('CÓMO FUNCIONA') */
         .info-box {
             background-color: #1a1a1a;
             border: 1px solid #ffca47;
@@ -50,21 +46,25 @@
             text-align: left;
         }
         .info-header {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-        .info-body {
-            color: #bfbfbf;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             line-height: 1.5;
         }
 
-        /* CAJA DE CÓDIGO (CON EL LOGO EveryCine Y EL CÓDIGO) */
+        .section-title {
+            color: #ffca47;
+            font-size: 1.5rem;
+            margin: 35px 0 20px 0;
+            text-align: left;
+            border-bottom: 2px solid #ffca47;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+        }
+
         .code-box {
             background-color: #1a1a1a;
             border: 1px solid #333333;
             border-radius: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding: 20px;
             text-align: left;
         }
@@ -72,9 +72,10 @@
             color: #ffca47;
             font-size: 1.1rem;
             margin-bottom: 15px;
+            font-weight: bold;
         }
-        .everycine-emoji {
-            font-size: 1.4rem;
+        .code-emoji {
+            font-size: 1.3rem;
             margin-right: 8px;
             vertical-align: middle;
         }
@@ -84,70 +85,231 @@
         .code-value {
             border: 1px dashed #333333;
             border-radius: 8px;
-            color: white;
+            color: #ffffff;
             font-family: 'Courier New', monospace;
             font-size: 2rem;
+            font-weight: bold;
             padding: 10px;
             text-align: center;
         }
 
-        /* BOTÓN DE ACCIÓN (ABRIR DOWNLOADER) */
         .action-button {
+            display: block;
             background-color: #ffca47;
             border: none;
             border-radius: 8px;
             color: #0d0d0d;
             font-size: 1.1rem;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 15px;
             padding: 15px;
             text-transform: uppercase;
             width: 100%;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
         }
         .button-subtitle {
             color: #8c8c8c;
             font-size: 0.85rem;
             margin-top: 8px;
+            text-align: center;
         }
 
-        /* PIE DE PÁGINA (FOOTER) */
         .footer {
             color: #595959;
             font-size: 0.9rem;
             margin-top: 50px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- CABECERA -->
     <div class="header">
         <span class="corona-emoji">👑</span>
         <h1 class="main-title">DECO RICHAR</h1>
         <p class="subtitle">Códigos rápidos para Downloader</p>
     </div>
 
-    <!-- CAJA DE INFORMACIÓN -->
     <div class="info-box">
-        <div class="info-header">📺 <strong>Cómo funciona:</strong> tocá un código. La guía copia el código y trata de abrir Downloader automáticamente. Al entrar en Downloader, pegá el código y presioná <strong>Go</strong>.</div>
+        <div class="info-header">📺 <strong>Cómo funciona en TV Box / Android TV:</strong> al tocar el botón se copiará el código y abrirá Downloader. Si no abre automáticamente, la app ya estará lista para que pegues el código en la pantalla principal.</div>
     </div>
 
-    <!-- CAJA DE CÓDIGO EveryCine -->
+    <!-- SECCIÓN 1: GOFILE -->
+    <h2 class="section-title">🌟 Plataforma: GoFile</h2>
+
     <div class="code-box">
-        <div class="code-title">
-            <span class="everycine-emoji">⬇️</span>
-            <span class="code-title-text">EveryCine</span>
-        </div>
-        <div class="code-value">7983114</div>
-        <button class="action-button">ABRIR DOWNLOADER</button>
-        <p class="button-subtitle">Tocá este botón para copiar el código y abrir Downloader.</p>
+        <div class="code-title"><span class="code-emoji">📺</span><span class="code-title-text">APP (TV EN VIVO Y +)</span></div>
+        <div class="code-value">3269279</div>
+        <button class="action-button" onclick="ejecutarDownloader('3269279', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
     </div>
 
-    <!-- PIE DE PÁGINA -->
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">⚽</span><span class="code-title-text">APP DE DEPORTES</span></div>
+        <div class="code-value">9268654</div>
+        <button class="action-button" onclick="ejecutarDownloader('9268654', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🎬</span><span class="code-title-text">APP (PELIS, SERIES Y ANIME)</span></div>
+        <div class="code-value">7010590</div>
+        <button class="action-button" onclick="ejecutarDownloader('7010590', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🍿</span><span class="code-title-text">XUPERTV-MOD (NF)</span></div>
+        <div class="code-value">3294933</div>
+        <button class="action-button" onclick="ejecutarDownloader('3294933', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🐉</span><span class="code-title-text">XUPERTV-MOD (Hydra)</span></div>
+        <div class="code-value">9160151</div>
+        <button class="action-button" onclick="ejecutarDownloader('9160151', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">⚡</span><span class="code-title-text">XUPERTV-MOD (1x1)</span></div>
+        <div class="code-value">4220280</div>
+        <button class="action-button" onclick="ejecutarDownloader('4220280', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">⬇️</span><span class="code-title-text">APP (Downloader MOD) v1.5.3</span></div>
+        <div class="code-value">8169714</div>
+        <button class="action-button" onclick="ejecutarDownloader('8169714', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🦟</span><span class="code-title-text">APP (VPN SALTAMONTES)</span></div>
+        <div class="code-value">3738936</div>
+        <button class="action-button" onclick="ejecutarDownloader('3738936', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">▶️</span><span class="code-title-text">APP (YOUTUBE TV PREMIUM)</span></div>
+        <div class="code-value">2430928</div>
+        <button class="action-button" onclick="ejecutarDownloader('2430928', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">📻</span><span class="code-title-text">APP (REPRODUCTORES IPTV)</span></div>
+        <div class="code-value">5912127</div>
+        <button class="action-button" onclick="ejecutarDownloader('5912127', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <!-- SECCIÓN 2: MEDIAFIRE -->
+    <h2 class="section-title">🌟 Plataforma: MediaFire</h2>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">📺</span><span class="code-title-text">APP (TV EN VIVO Y +)</span></div>
+        <div class="code-value">5517513</div>
+        <button class="action-button" onclick="ejecutarDownloader('5517513', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">⚽</span><span class="code-title-text">APP DE DEPORTES</span></div>
+        <div class="code-value">5794448</div>
+        <button class="action-button" onclick="ejecutarDownloader('5794448', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🎬</span><span class="code-title-text">APP (PELIS, SERIES Y ANIME)</span></div>
+        <div class="code-value">9847869</div>
+        <button class="action-button" onclick="ejecutarDownloader('9847869', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🍿</span><span class="code-title-text">XUPERTV-MOD (NF)</span></div>
+        <div class="code-value">7844689</div>
+        <button class="action-button" onclick="ejecutarDownloader('7844689', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🐉</span><span class="code-title-text">XUPERTV-MOD (Hydra)</span></div>
+        <div class="code-value">8997351</div>
+        <button class="action-button" onclick="ejecutarDownloader('8997351', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">⚡</span><span class="code-title-text">XUPERTV-MOD (1x1)</span></div>
+        <div class="code-value">5880180</div>
+        <button class="action-button" onclick="ejecutarDownloader('5880180', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">⬇️</span><span class="code-title-text">APP (Downloader MOD) v1.5.3</span></div>
+        <div class="code-value">8169714</div>
+        <button class="action-button" onclick="ejecutarDownloader('8169714', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">🦟</span><span class="code-title-text">APP (VPN SALTAMONTES)</span></div>
+        <div class="code-value">6573596</div>
+        <button class="action-button" onclick="ejecutarDownloader('6573596', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
+    <div class="code-box">
+        <div class="code-title"><span class="code-emoji">▶️</span><span class="code-title-text">APP (YOUTUBE TV PREMIUM)</span></div>
+        <div class="code-value">2422026</div>
+        <button class="action-button" onclick="ejecutarDownloader('2422026', this)">ABRIR DOWNLOADER</button>
+        <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
+    </div>
+
     <div class="footer">
         DECO RICHAR • Calidad & Estilo
     </div>
 
+    <!-- SCRIPT COMPATIBLE CON ANDROID TV -->
+    <script>
+        function ejecutarDownloader(codigo, boton) {
+            // Copia el código al portapapeles
+            navigator.clipboard.writeText(codigo).then(() => {
+                const textoOriginal = boton.innerText;
+                
+                boton.innerText = "¡CÓDIGO COPIADO!";
+                boton.style.backgroundColor = "#4caf50";
+                boton.style.color = "#ffffff";
+
+                // Intenta abrir Downloader mediante el protocolo de Android
+                setTimeout(() => {
+                    window.location.href = "downloader://" + codigo;
+                }, 500);
+
+                // Restaura el botón
+                setTimeout(() => {
+                    boton.innerText = textoOriginal;
+                    boton.style.backgroundColor = "#ffca47";
+                    boton.style.color = "#0d0d0d";
+                }, 2500);
+            }).catch(err => {
+                // Si la copia falla por permisos del navegador de la TV, abre directo
+                window.location.href = "downloader://" + codigo;
+            });
+        }
+    </script>
+
 </body>
-</html>
+    </html>
+                                                                     
 
