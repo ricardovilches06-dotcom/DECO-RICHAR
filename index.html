@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -268,14 +268,13 @@
         <button class="action-button" onclick="ejecutarDownloader('6573596', this)">ABRIR DOWNLOADER</button>
         <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
     </div>
-        <!-- ... (tu código anterior) ... -->
+
     <div class="code-box">
-        <div class="code-title"><span class="code-emoji">🚀</span><span class="code-title-text">NOMBRE DE TU APP</span></div>
+        <div class="code-title"><span class="code-emoji">🚀</span><span class="code-title-text">NUEVA APP</span></div>
         <div class="code-value">278036110</div>
-        <button class="action-button" onclick="ejecutarDownloader('1234567', this)">ABRIR DOWNLOADER</button>
+        <button class="action-button" onclick="ejecutarDownloader('278036110', this)">ABRIR DOWNLOADER</button>
         <p class="button-subtitle">Tocá este botón para copiar e ingresar a Downloader.</p>
     </div>
-    
 
     <div class="code-box">
         <div class="code-title"><span class="code-emoji">▶️</span><span class="code-title-text">APP (YOUTUBE TV PREMIUM)</span></div>
@@ -288,10 +287,8 @@
         DECO RICHAR • Calidad & Estilo
     </div>
 
-    <!-- SCRIPT COMPATIBLE CON ANDROID TV -->
     <script>
         function ejecutarDownloader(codigo, boton) {
-            // Copia el código al portapapeles
             navigator.clipboard.writeText(codigo).then(() => {
                 const textoOriginal = boton.innerText;
                 
@@ -299,25 +296,20 @@
                 boton.style.backgroundColor = "#4caf50";
                 boton.style.color = "#ffffff";
 
-                // Intenta abrir Downloader mediante el protocolo de Android
                 setTimeout(() => {
                     window.location.href = "downloader://" + codigo;
                 }, 500);
 
-                // Restaura el botón
                 setTimeout(() => {
                     boton.innerText = textoOriginal;
                     boton.style.backgroundColor = "#ffca47";
                     boton.style.color = "#0d0d0d";
                 }, 2500);
             }).catch(err => {
-                // Si la copia falla por permisos del navegador de la TV, abre directo
                 window.location.href = "downloader://" + codigo;
             });
         }
     </script>
 
 </body>
-    </html>
-                                                                     
-
+</html>
